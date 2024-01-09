@@ -518,7 +518,7 @@ class ListRepository
             throw new MailchimpException(
                 $errorArray['status'],
                 $errorArray['detail'],
-                $errorArray['type'],
+                $errorArray['type'] ?? null,
                 $errorArray['title'],
                 $errorArray['errors'],
                 $errorArray['instance']
@@ -527,7 +527,7 @@ class ListRepository
             throw new MailchimpException(
                 $errorArray['status'],
                 $errorArray['detail'],
-                $errorArray['type'],
+                $errorArray['type'] ?? null,
                 $errorArray['title'],
                 null,
                 $errorArray['instance']
